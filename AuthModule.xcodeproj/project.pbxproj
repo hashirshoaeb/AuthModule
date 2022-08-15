@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		7CEF009128AA5028009FFCEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF009028AA5028009FFCEF /* AppDelegate.swift */; };
 		7CEF009328AA5028009FFCEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF009228AA5028009FFCEF /* SceneDelegate.swift */; };
-		7CEF009528AA5028009FFCEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF009428AA5028009FFCEF /* ViewController.swift */; };
-		7CEF009828AA5028009FFCEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CEF009628AA5028009FFCEF /* Main.storyboard */; };
 		7CEF009A28AA5029009FFCEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CEF009928AA5029009FFCEF /* Assets.xcassets */; };
 		7CEF009D28AA5029009FFCEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CEF009B28AA5029009FFCEF /* LaunchScreen.storyboard */; };
+		7CEF00AA28AA6A3D009FFCEF /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF00A428AA6A3C009FFCEF /* SignupPresenter.swift */; };
+		7CEF00AB28AA6A3D009FFCEF /* SignupWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF00A528AA6A3D009FFCEF /* SignupWorker.swift */; };
+		7CEF00AC28AA6A3D009FFCEF /* SignupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF00A628AA6A3D009FFCEF /* SignupRouter.swift */; };
+		7CEF00AD28AA6A3D009FFCEF /* SignupModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF00A728AA6A3D009FFCEF /* SignupModels.swift */; };
+		7CEF00AE28AA6A3D009FFCEF /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF00A828AA6A3D009FFCEF /* SignupViewController.swift */; };
+		7CEF00AF28AA6A3D009FFCEF /* SignupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF00A928AA6A3D009FFCEF /* SignupInteractor.swift */; };
+		7CEF00B228AA6C38009FFCEF /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CEF00B128AA6C38009FFCEF /* Signup.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7CEF008D28AA5028009FFCEF /* AuthModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEF009028AA5028009FFCEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CEF009228AA5028009FFCEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7CEF009428AA5028009FFCEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7CEF009728AA5028009FFCEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CEF009928AA5029009FFCEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CEF009C28AA5029009FFCEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CEF009E28AA5029009FFCEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CEF00A428AA6A3C009FFCEF /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
+		7CEF00A528AA6A3D009FFCEF /* SignupWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWorker.swift; sourceTree = "<group>"; };
+		7CEF00A628AA6A3D009FFCEF /* SignupRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRouter.swift; sourceTree = "<group>"; };
+		7CEF00A728AA6A3D009FFCEF /* SignupModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModels.swift; sourceTree = "<group>"; };
+		7CEF00A828AA6A3D009FFCEF /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		7CEF00A928AA6A3D009FFCEF /* SignupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInteractor.swift; sourceTree = "<group>"; };
+		7CEF00B128AA6C38009FFCEF /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +67,27 @@
 			isa = PBXGroup;
 			children = (
 				7CEF009028AA5028009FFCEF /* AppDelegate.swift */,
+				7CEF00B028AA6BB2009FFCEF /* Signup */,
 				7CEF009228AA5028009FFCEF /* SceneDelegate.swift */,
-				7CEF009428AA5028009FFCEF /* ViewController.swift */,
-				7CEF009628AA5028009FFCEF /* Main.storyboard */,
 				7CEF009928AA5029009FFCEF /* Assets.xcassets */,
 				7CEF009B28AA5029009FFCEF /* LaunchScreen.storyboard */,
 				7CEF009E28AA5029009FFCEF /* Info.plist */,
 			);
 			path = AuthModule;
+			sourceTree = "<group>";
+		};
+		7CEF00B028AA6BB2009FFCEF /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				7CEF00A428AA6A3C009FFCEF /* SignupPresenter.swift */,
+				7CEF00A528AA6A3D009FFCEF /* SignupWorker.swift */,
+				7CEF00A628AA6A3D009FFCEF /* SignupRouter.swift */,
+				7CEF00A728AA6A3D009FFCEF /* SignupModels.swift */,
+				7CEF00A828AA6A3D009FFCEF /* SignupViewController.swift */,
+				7CEF00A928AA6A3D009FFCEF /* SignupInteractor.swift */,
+				7CEF00B128AA6C38009FFCEF /* Signup.storyboard */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +150,7 @@
 			files = (
 				7CEF009D28AA5029009FFCEF /* LaunchScreen.storyboard in Resources */,
 				7CEF009A28AA5029009FFCEF /* Assets.xcassets in Resources */,
-				7CEF009828AA5028009FFCEF /* Main.storyboard in Resources */,
+				7CEF00B228AA6C38009FFCEF /* Signup.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +161,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CEF009528AA5028009FFCEF /* ViewController.swift in Sources */,
+				7CEF00AC28AA6A3D009FFCEF /* SignupRouter.swift in Sources */,
+				7CEF00AF28AA6A3D009FFCEF /* SignupInteractor.swift in Sources */,
+				7CEF00AE28AA6A3D009FFCEF /* SignupViewController.swift in Sources */,
 				7CEF009128AA5028009FFCEF /* AppDelegate.swift in Sources */,
+				7CEF00AA28AA6A3D009FFCEF /* SignupPresenter.swift in Sources */,
+				7CEF00AB28AA6A3D009FFCEF /* SignupWorker.swift in Sources */,
 				7CEF009328AA5028009FFCEF /* SceneDelegate.swift in Sources */,
+				7CEF00AD28AA6A3D009FFCEF /* SignupModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7CEF009628AA5028009FFCEF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7CEF009728AA5028009FFCEF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7CEF009B28AA5029009FFCEF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,7 +311,7 @@
 				INFOPLIST_FILE = AuthModule/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Signup;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,7 +338,7 @@
 				INFOPLIST_FILE = AuthModule/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Signup;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
