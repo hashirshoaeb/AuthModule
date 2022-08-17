@@ -49,7 +49,7 @@ class SignupViewController: UIViewController, VIPSetup, SignupDisplayLogic {
         let viewController = self
         let presenter = SignupPresenter(viewController: viewController)
         let router = SignupRouter()
-        let interactor = SignupInteractor(presenter: presenter, worker: SignupWorker())
+        let interactor = SignupInteractor(presenter: presenter) //workers could be multiple, also i think VC shouldn't know about worker
         viewController.interactor = interactor
         viewController.router = router
         router.viewController = viewController
@@ -149,7 +149,7 @@ class SignupViewController: UIViewController, VIPSetup, SignupDisplayLogic {
     }
     
     func removeSignupFromProgress() {
-        
+        print("sign up success")
     }
     
     //@IBOutlet weak var nameTextField: UITextField!

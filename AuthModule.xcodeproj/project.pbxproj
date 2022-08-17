@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3AF9E328ABA57B00E75DEC /* LamudiSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3AF9E228ABA57B00E75DEC /* LamudiSignup.storyboard */; };
+		0F3AF9F728ABA91100E75DEC /* LamudiSignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AF9F128ABA91100E75DEC /* LamudiSignupPresenter.swift */; };
+		0F3AF9F828ABA91100E75DEC /* LamudiSignupWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AF9F228ABA91100E75DEC /* LamudiSignupWorker.swift */; };
+		0F3AF9F928ABA91100E75DEC /* LamudiSignupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AF9F328ABA91100E75DEC /* LamudiSignupRouter.swift */; };
+		0F3AF9FA28ABA91100E75DEC /* LamudiSignupModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AF9F428ABA91100E75DEC /* LamudiSignupModels.swift */; };
+		0F3AF9FB28ABA91100E75DEC /* LamudiSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AF9F528ABA91100E75DEC /* LamudiSignupViewController.swift */; };
+		0F3AF9FC28ABA91100E75DEC /* LamudiSignupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AF9F628ABA91100E75DEC /* LamudiSignupInteractor.swift */; };
 		7CEF009128AA5028009FFCEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF009028AA5028009FFCEF /* AppDelegate.swift */; };
 		7CEF009328AA5028009FFCEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF009228AA5028009FFCEF /* SceneDelegate.swift */; };
 		7CEF009A28AA5029009FFCEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CEF009928AA5029009FFCEF /* Assets.xcassets */; };
@@ -21,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F3AF9E228ABA57B00E75DEC /* LamudiSignup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LamudiSignup.storyboard; sourceTree = "<group>"; };
+		0F3AF9F128ABA91100E75DEC /* LamudiSignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LamudiSignupPresenter.swift; sourceTree = "<group>"; };
+		0F3AF9F228ABA91100E75DEC /* LamudiSignupWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LamudiSignupWorker.swift; sourceTree = "<group>"; };
+		0F3AF9F328ABA91100E75DEC /* LamudiSignupRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LamudiSignupRouter.swift; sourceTree = "<group>"; };
+		0F3AF9F428ABA91100E75DEC /* LamudiSignupModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LamudiSignupModels.swift; sourceTree = "<group>"; };
+		0F3AF9F528ABA91100E75DEC /* LamudiSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LamudiSignupViewController.swift; sourceTree = "<group>"; };
+		0F3AF9F628ABA91100E75DEC /* LamudiSignupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LamudiSignupInteractor.swift; sourceTree = "<group>"; };
 		7CEF008D28AA5028009FFCEF /* AuthModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEF009028AA5028009FFCEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CEF009228AA5028009FFCEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +61,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F3AF9E428ABA58B00E75DEC /* LamudiSignup */ = {
+			isa = PBXGroup;
+			children = (
+				0F3AF9E228ABA57B00E75DEC /* LamudiSignup.storyboard */,
+				0F3AF9F128ABA91100E75DEC /* LamudiSignupPresenter.swift */,
+				0F3AF9F228ABA91100E75DEC /* LamudiSignupWorker.swift */,
+				0F3AF9F328ABA91100E75DEC /* LamudiSignupRouter.swift */,
+				0F3AF9F428ABA91100E75DEC /* LamudiSignupModels.swift */,
+				0F3AF9F528ABA91100E75DEC /* LamudiSignupViewController.swift */,
+				0F3AF9F628ABA91100E75DEC /* LamudiSignupInteractor.swift */,
+			);
+			path = LamudiSignup;
+			sourceTree = "<group>";
+		};
 		7CEF008428AA5028009FFCEF = {
 			isa = PBXGroup;
 			children = (
@@ -67,8 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				7CEF009028AA5028009FFCEF /* AppDelegate.swift */,
-				7CEF00B028AA6BB2009FFCEF /* Signup */,
 				7CEF009228AA5028009FFCEF /* SceneDelegate.swift */,
+				7CEF00B028AA6BB2009FFCEF /* Signup */,
+				0F3AF9E428ABA58B00E75DEC /* LamudiSignup */,
 				7CEF009928AA5029009FFCEF /* Assets.xcassets */,
 				7CEF009B28AA5029009FFCEF /* LaunchScreen.storyboard */,
 				7CEF009E28AA5029009FFCEF /* Info.plist */,
@@ -148,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F3AF9E328ABA57B00E75DEC /* LamudiSignup.storyboard in Resources */,
 				7CEF009D28AA5029009FFCEF /* LaunchScreen.storyboard in Resources */,
 				7CEF009A28AA5029009FFCEF /* Assets.xcassets in Resources */,
 				7CEF00B228AA6C38009FFCEF /* Signup.storyboard in Resources */,
@@ -162,13 +192,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CEF00AC28AA6A3D009FFCEF /* SignupRouter.swift in Sources */,
+				0F3AF9FA28ABA91100E75DEC /* LamudiSignupModels.swift in Sources */,
+				0F3AF9F928ABA91100E75DEC /* LamudiSignupRouter.swift in Sources */,
 				7CEF00AF28AA6A3D009FFCEF /* SignupInteractor.swift in Sources */,
+				0F3AF9FC28ABA91100E75DEC /* LamudiSignupInteractor.swift in Sources */,
 				7CEF00AE28AA6A3D009FFCEF /* SignupViewController.swift in Sources */,
 				7CEF009128AA5028009FFCEF /* AppDelegate.swift in Sources */,
 				7CEF00AA28AA6A3D009FFCEF /* SignupPresenter.swift in Sources */,
 				7CEF00AB28AA6A3D009FFCEF /* SignupWorker.swift in Sources */,
 				7CEF009328AA5028009FFCEF /* SceneDelegate.swift in Sources */,
+				0F3AF9F728ABA91100E75DEC /* LamudiSignupPresenter.swift in Sources */,
+				0F3AF9FB28ABA91100E75DEC /* LamudiSignupViewController.swift in Sources */,
 				7CEF00AD28AA6A3D009FFCEF /* SignupModels.swift in Sources */,
+				0F3AF9F828ABA91100E75DEC /* LamudiSignupWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +347,7 @@
 				INFOPLIST_FILE = AuthModule/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Signup;
+				INFOPLIST_KEY_UIMainStoryboardFile = LamudiSignup;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -338,7 +374,7 @@
 				INFOPLIST_FILE = AuthModule/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Signup;
+				INFOPLIST_KEY_UIMainStoryboardFile = LamudiSignup;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
