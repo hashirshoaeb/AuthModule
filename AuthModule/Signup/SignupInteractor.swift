@@ -32,7 +32,7 @@ protocol PasswordBLProtocol {
     func onPasswordChanged(value: String?)
 }
 
-protocol PasswordDSProtocl {
+protocol PasswordDSProtcol {
     var password: String? { get set }
 }
 
@@ -41,22 +41,19 @@ protocol SignupButtonBLProtocol {
 }
 
 protocol SignupBusinessLogic: UsernameBLProtocol, EmailBLProtocol, PasswordBLProtocol, SignupButtonBLProtocol {
-    //  func doSomething(request: Signup.Something.Request)
+//    setupSignUpFields()
 }
 
-protocol SignupDataStore: UsernameDSProtocl, EmailDSProtocl, PasswordDSProtocl {
-    
-}
+protocol SignupDataStore: UsernameDSProtocl, EmailDSProtocl, PasswordDSProtcol {}
 
 class SignupInteractor: SignupBusinessLogic, SignupDataStore {
     // MARK: - VIP SETUP
     
     let presenter: SignupPresentationLogic
-    let worker: SignupWorker
+    var worker: SignupWorker?
     
-    init(presenter: SignupPresentationLogic, worker: SignupWorker) {
+    init(presenter: SignupPresentationLogic) {
         self.presenter = presenter
-        self.worker = worker
     }
     
     // MARK: - DATA STORE
@@ -69,7 +66,6 @@ class SignupInteractor: SignupBusinessLogic, SignupDataStore {
     
     func onUsernameChanged(value: String?) {
         username = value
-        print("USER NAME CHANGING TO \(username)")
         presenter.removeUsernameValidationError()
     }
     
