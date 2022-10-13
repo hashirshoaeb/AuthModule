@@ -12,18 +12,17 @@
 
 import UIKit
 
-@objc protocol LamudiSignupRoutingLogic
-{
+protocol LamudiSignupRoutingLogic {
     //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-//protocol LamudiSignupDataPassing
-//{
-//    var dataStore: LamudiSignupDataStore? { get }
-//}
+protocol LamudiSignupDataPassing {
+    
+}
 
-class LamudiSignupRouter: SignupRouter, LamudiSignupRoutingLogic
-{
+class LamudiSignupRouter: SignupRouter, LamudiSignupRoutingLogic, LamudiSignupDataPassing {
+ 
+    
 
 //    weak var viewController: LamudiSignupViewController?
 //    var dataStore: LamudiSignupDataStore?

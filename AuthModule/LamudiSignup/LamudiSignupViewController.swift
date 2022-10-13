@@ -12,57 +12,129 @@
 
 import UIKit
 
-protocol LamudiSignupDisplayLogic
-{
+protocol LamudiSignupDisplayLogic {
     func showLastNameValidationError(error: String)
     func removeLastNameValidationError()
 }
 
-class LamudiSignupViewController: SignupViewController, LamudiSignupDisplayLogic
-{
+class LamudiSignupViewController: UIViewController, SignupDisplayLogic, LamudiSignupDisplayLogic, VIPSetup {
+    // MARK: - VIP SETUP
     
-    @IBOutlet weak var lastNameTextField: UITextField!
-    @IBOutlet weak var lastNameErrorMessageLabel: UILabel!
-    // MARK: Object lifecycle
+    var interactor: LamudiSignupBusinessLogic?
+    var router: (NSObjectProtocol & LamudiSignupRoutingLogic & LamudiSignupDataPassing)?
+
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-    {
+    // MARK: - Object lifecycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder)
-    {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
     
-    // MARK: Setup
-    
-    override func setup()
-    {
-        super.setup()
+    func setup(){
         let viewController = self
         let presenter = LamudiSignupPresenter(viewController: viewController)
         let interactor = LamudiSignupInteractor(presenter: presenter)
         let router = LamudiSignupRouter()
         viewController.interactor = interactor
         viewController.router = router
-        router.viewController = viewController
+        // router.viewController = viewController
         router.dataStore = interactor
     }
     
+    
+    // MARK: - Routing
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //        if let scene = segue.identifier {
+        //            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+        //            if let router = router, router.responds(to: selector) {
+        //                router.perform(selector, with: segue)
+        //            }
+        //        }
+    }
+
+    
+    
+    // MARK: - VIEW
+    
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var usernameErrorMessageLabel: UILabel!
+    @IBOutlet weak var emailErrorMessageLabel: UILabel!
+    @IBOutlet weak var passwordMessageLabel: UILabel!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var lastNameErrorMessageLabel: UILabel!
+    
+    
+    @IBAction func onUsernameChanged(_ sender: UITextField) {
+        interactor?.onUsernameChanged(value: sender.text)
+    }
+    
+    @IBAction func onEmailChanged(_ sender: UITextField) {
+        interactor?.onEmailChanged(value: sender.text)
+    }
+    
+    @IBAction func onPasswordChanged(_ sender: UITextField) {
+        interactor?.onPasswordChanged(value: sender.text)
+    }
+    
+    @IBAction func onSignupButtonTapped(_ sender: UIButton) {
+        interactor?.onSignupButtonPressed()
+    }
+    
+    // MARK: - DISPLAY LOGIC
+    
+    func showUsernameValidationError(error: String) {
+        usernameErrorMessageLabel.text = error
+    }
+    
+    func removeUsernameValidationError() {
+        usernameErrorMessageLabel.text = ""
+    }
+    
+    func showEmailValidationError(error: String) {
+        emailErrorMessageLabel.text = error
+    }
+    
+    func removeEmailValidationError() {
+        emailErrorMessageLabel.text = ""
+    }
+    
+    func showPasswordValidationError(error: String) {
+        passwordMessageLabel.text = error
+    }
+    
+    func removePasswordValidationError() {
+        passwordMessageLabel.text = ""
+    }
+    
+    func showSignupInProgress() {
+        
+    }
+    
+    func removeSignupFromProgress() {
+        print("sign up success")
+    }
+
+    
     // MARK: View lifecycle
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     // MARK: Do something
     
     @IBAction func onLastNameChanged(_ sender: UITextField) {
-        (interactor as! LamudiSignupBusinessLogic).onLastNameChanged(value: sender.text)
+        interactor?.onLastNameChanged(value: sender.text)
     }
     
     func showLastNameValidationError(error: String) {

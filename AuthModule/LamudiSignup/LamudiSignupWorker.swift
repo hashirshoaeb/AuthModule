@@ -12,9 +12,7 @@
 
 import UIKit
 
-class LamudiSignupWorker
-{
-  func doSomeWork()
-  {
-  }
+class LamudiSignupWorker {
+    func doSomeWork() {
+    }
 }

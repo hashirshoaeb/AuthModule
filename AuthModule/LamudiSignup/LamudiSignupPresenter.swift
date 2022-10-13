@@ -12,14 +12,12 @@
 
 import UIKit
 
-protocol LamudiSignupPresentationLogic: SignupPresentationLogic
-{
+protocol LamudiSignupPresentationLogic: SignupPresentationLogic {
     func showLastNameValidationError(error: String)
     func removeLastNameValidationError()
 }
 
-class LamudiSignupPresenter: SignupPresenter, LamudiSignupPresentationLogic
-{
+class LamudiSignupPresenter: SignupPresenter, LamudiSignupPresentationLogic {
   
   // MARK: Do something
   
