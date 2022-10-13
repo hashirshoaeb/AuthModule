@@ -12,39 +12,18 @@
 
 import UIKit
 
-protocol UsernameBLProtocol {
+protocol SignupBusinessLogic {
     func onUsernameChanged(value: String?)
-}
-
-protocol UsernameDSProtocl {
-    var username: String? { get set }
-}
-
-protocol EmailBLProtocol {
     func onEmailChanged(value: String?)
-}
-
-protocol EmailDSProtocl {
-    var email: String? { get set }
-}
-
-protocol PasswordBLProtocol {
     func onPasswordChanged(value: String?)
-}
-
-protocol PasswordDSProtcol {
-    var password: String? { get set }
-}
-
-protocol SignupButtonBLProtocol {
     func onSignupButtonPressed()
 }
 
-protocol SignupBusinessLogic: UsernameBLProtocol, EmailBLProtocol, PasswordBLProtocol, SignupButtonBLProtocol {
-//    setupSignUpFields()
+protocol SignupDataStore {
+    var username: String? { get set }
+    var email: String? { get set }
+    var password: String? { get set }
 }
-
-protocol SignupDataStore: UsernameDSProtocl, EmailDSProtocl, PasswordDSProtcol {}
 
 class SignupInteractor: SignupBusinessLogic, SignupDataStore {
     // MARK: - VIP SETUP
@@ -132,13 +111,4 @@ class SignupInteractor: SignupBusinessLogic, SignupDataStore {
         
         return validationSuccess
     }
-    
-    //  func doSomething(request: Signup.Something.Request)
-    //  {
-    //    worker = SignupWorker()
-    //    worker?.doSomeWork()
-    //
-    //    let response = Signup.Something.Response()
-    //    presenter?.presentSomething(response: response)
-    //  }
 }

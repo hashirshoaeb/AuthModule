@@ -17,7 +17,6 @@ protocol VIPSetup {
 }
 
 protocol SignupDisplayLogic {
-    //    func displaySomething(viewModel: Signup.Something.ViewModel)
     func showUsernameValidationError(error: String)
     func removeUsernameValidationError()
     func showEmailValidationError(error: String)
@@ -31,19 +30,8 @@ protocol SignupDisplayLogic {
 class SignupViewController: UIViewController, VIPSetup, SignupDisplayLogic {
     // MARK: - VIP SETUP
     
-    var interactor: SignupBusinessLogic! {
-        didSet {
-//            assert(interactor == nil, "Do not assign nil")
-//            assert(oldValue != nil, "Value should be assigned once")
-        }
-    }
-    
-    var router: (NSObjectProtocol & SignupRoutingLogic & SignupDataPassing)? {
-        didSet {
-//            assert(router == nil, "Do not assign nil")
-//            assert(oldValue != nil, "Value should be assigned once")
-        }
-    }
+    var interactor: SignupBusinessLogic?
+    var router: (NSObjectProtocol & SignupRoutingLogic & SignupDataPassing)?
     
     internal func setup() {
         let viewController = self
@@ -103,19 +91,19 @@ class SignupViewController: UIViewController, VIPSetup, SignupDisplayLogic {
     
     
     @IBAction func onUsernameChanged(_ sender: UITextField) {
-        interactor.onUsernameChanged(value: sender.text)
+        interactor?.onUsernameChanged(value: sender.text)
     }
     
     @IBAction func onEmailChanged(_ sender: UITextField) {
-        interactor.onEmailChanged(value: sender.text)
+        interactor?.onEmailChanged(value: sender.text)
     }
     
     @IBAction func onPasswordChanged(_ sender: UITextField) {
-        interactor.onPasswordChanged(value: sender.text)
+        interactor?.onPasswordChanged(value: sender.text)
     }
     
     @IBAction func onSignupButtonTapped(_ sender: UIButton) {
-        interactor.onSignupButtonPressed()
+        interactor?.onSignupButtonPressed()
     }
     
     // MARK: - DISPLAY LOGIC
@@ -151,17 +139,4 @@ class SignupViewController: UIViewController, VIPSetup, SignupDisplayLogic {
     func removeSignupFromProgress() {
         print("sign up success")
     }
-    
-    //@IBOutlet weak var nameTextField: UITextField!
-    
-    //    func doSomething()
-    //    {
-    //        let request = Signup.Something.Request()
-    //        interactor?.doSomething(request: request)
-    //    }
-    
-    //    func displaySomething(viewModel: Signup.Something.ViewModel)
-    //    {
-    //        //nameTextField.text = viewModel.name
-    //    }
 }

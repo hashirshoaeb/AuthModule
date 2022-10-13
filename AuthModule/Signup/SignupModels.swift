@@ -14,18 +14,15 @@ import UIKit
 
 enum Signup
 {
-  // MARK: Use cases
-  
-  enum Something
-  {
-    struct Request
+    // MARK: Use cases
+    
+    enum Something
     {
+        struct Request {
+        }
+        struct Response {
+        }
+        struct ViewModel {
+        }
     }
-    struct Response
-    {
-    }
-    struct ViewModel
-    {
-    }
-  }
 }

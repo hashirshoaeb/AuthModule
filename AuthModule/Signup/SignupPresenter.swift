@@ -13,7 +13,6 @@
 import UIKit
 
 protocol SignupPresentationLogic {
-    //    func presentSomething(response: Signup.Something.Response)
     func showUsernameValidationError(error: String)
     func removeUsernameValidationError()
     func showEmailValidationError(error: String)
@@ -67,13 +66,4 @@ class SignupPresenter: SignupPresentationLogic {
     func removeSignupFromProgress() {
         viewController.removeSignupFromProgress()
     }
-    
-    
-    // MARK: Do something
-    
-    //    func presentSomething(response: Signup.Something.Response)
-    //    {
-    //        let viewModel = Signup.Something.ViewModel()
-    //        viewController?.displaySomething(viewModel: viewModel)
-    //    }
 }
