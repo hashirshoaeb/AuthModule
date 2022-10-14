@@ -28,8 +28,8 @@ protocol SignupDataStore {
 class SignupInteractor: SignupBusinessLogic, SignupDataStore {
     // MARK: - VIP SETUP
     
-    let presenter: SignupPresentationLogic
-    var worker: SignupWorker?
+    private let presenter: SignupPresentationLogic
+    private var worker: SignupWorker?
     
     init(presenter: SignupPresentationLogic) {
         self.presenter = presenter

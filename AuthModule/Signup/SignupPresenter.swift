@@ -27,7 +27,7 @@ protocol SignupPresentationLogic {
 class SignupPresenter: SignupPresentationLogic {
     // MARK: - VIP SETUP
     
-    let viewController: SignupDisplayLogic
+    private let viewController: SignupDisplayLogic
     
     init(viewController: SignupDisplayLogic) {
         self.viewController = viewController
