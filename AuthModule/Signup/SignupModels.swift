@@ -13,9 +13,7 @@
 import UIKit
 
 enum Signup
-{
-    // MARK: Use cases
-    
+{    
     enum Something
     {
         struct Request {

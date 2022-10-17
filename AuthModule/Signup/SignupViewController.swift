@@ -12,10 +12,6 @@
 
 import UIKit
 
-protocol VIPSetup {
-    func setup() -> Void
-}
-
 protocol SignupDisplayLogic {
     func showUsernameValidationError(error: String)
     func removeUsernameValidationError()
@@ -27,8 +23,19 @@ protocol SignupDisplayLogic {
     func removeSignupFromProgress()
 }
 
-class SignupViewController: UIViewController, VIPSetup, SignupDisplayLogic {
-    // MARK: - VIP SETUP
+class SignupViewController: UIViewController, VIPSetup {
+    
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var usernameErrorMessageLabel: UILabel!
+    @IBOutlet weak var emailErrorMessageLabel: UILabel!
+    @IBOutlet weak var passwordMessageLabel: UILabel!
+    
+    // MARK: - VIP Setup
     
     var interactor: SignupBusinessLogic?
     var router: (NSObjectProtocol & SignupRoutingLogic & SignupDataPassing)?
@@ -44,8 +51,7 @@ class SignupViewController: UIViewController, VIPSetup, SignupDisplayLogic {
         router.dataStore = interactor
     }
     
-    
-    // MARK: - Object lifecycle
+    // MARK: - View Life Cycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -57,38 +63,15 @@ class SignupViewController: UIViewController, VIPSetup, SignupDisplayLogic {
         setup()
     }
     
-    
-    
-    // MARK: - Routing
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //        if let scene = segue.identifier {
-        //            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-        //            if let router = router, router.responds(to: selector) {
-        //                router.perform(selector, with: segue)
-        //            }
-        //        }
+        super.prepare(for: segue, sender: sender)
     }
     
-    // MARK: - View lifecycle
-    
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        //        doSomething()
     }
     
-    
-    // MARK: - VIEW
-    
-    @IBOutlet weak var logoImageView: UIImageView!
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var usernameErrorMessageLabel: UILabel!
-    @IBOutlet weak var emailErrorMessageLabel: UILabel!
-    @IBOutlet weak var passwordMessageLabel: UILabel!
-    
+    // MARK: - IBActions
     
     @IBAction func onUsernameChanged(_ sender: UITextField) {
         interactor?.onUsernameChanged(value: sender.text)
@@ -106,8 +89,13 @@ class SignupViewController: UIViewController, VIPSetup, SignupDisplayLogic {
         interactor?.onSignupButtonPressed()
     }
     
-    // MARK: - DISPLAY LOGIC
+    // MARK: - Utility functions
     
+}
+
+// MARK: - Extensions
+
+extension SignupViewController: SignupDisplayLogic {
     func showUsernameValidationError(error: String) {
         usernameErrorMessageLabel.text = error
     }

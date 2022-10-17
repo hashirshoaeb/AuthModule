@@ -24,16 +24,18 @@ protocol SignupPresentationLogic {
     
 }
 
-class SignupPresenter: SignupPresentationLogic {
-    // MARK: - VIP SETUP
+class SignupPresenter {
+    // MARK: - VIP Setup
     
     private let viewController: SignupDisplayLogic
     
     init(viewController: SignupDisplayLogic) {
         self.viewController = viewController
     }
-    
-    // MARK: - PRESENTATION LOGIC
+}
+
+// MARK: - PRESENTATION LOGIC
+extension SignupPresenter : SignupPresentationLogic {
     
     func showUsernameValidationError(error: String) {
         viewController.showUsernameValidationError(error: error)

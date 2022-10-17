@@ -14,6 +14,7 @@
 		0F3AF9FA28ABA91100E75DEC /* LamudiSignupModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AF9F428ABA91100E75DEC /* LamudiSignupModels.swift */; };
 		0F3AF9FB28ABA91100E75DEC /* LamudiSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AF9F528ABA91100E75DEC /* LamudiSignupViewController.swift */; };
 		0F3AF9FC28ABA91100E75DEC /* LamudiSignupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AF9F628ABA91100E75DEC /* LamudiSignupInteractor.swift */; };
+		7C47D1ED28F9773A0046DFEE /* comon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C47D1EC28F9773A0046DFEE /* comon.swift */; };
 		7CEF009128AA5028009FFCEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF009028AA5028009FFCEF /* AppDelegate.swift */; };
 		7CEF009328AA5028009FFCEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF009228AA5028009FFCEF /* SceneDelegate.swift */; };
 		7CEF009A28AA5029009FFCEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CEF009928AA5029009FFCEF /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		0F3AF9F428ABA91100E75DEC /* LamudiSignupModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LamudiSignupModels.swift; sourceTree = "<group>"; };
 		0F3AF9F528ABA91100E75DEC /* LamudiSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LamudiSignupViewController.swift; sourceTree = "<group>"; };
 		0F3AF9F628ABA91100E75DEC /* LamudiSignupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LamudiSignupInteractor.swift; sourceTree = "<group>"; };
+		7C47D1EC28F9773A0046DFEE /* comon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comon.swift; sourceTree = "<group>"; };
 		7CEF008D28AA5028009FFCEF /* AuthModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEF009028AA5028009FFCEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CEF009228AA5028009FFCEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 			path = LamudiSignup;
 			sourceTree = "<group>";
 		};
+		7C10D18D28F97AE300889CFF /* ZameenSignup */ = {
+			isa = PBXGroup;
+			children = (
+				7CEF00B128AA6C38009FFCEF /* Signup.storyboard */,
+			);
+			path = ZameenSignup;
+			sourceTree = "<group>";
+		};
 		7CEF008428AA5028009FFCEF = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +104,12 @@
 		7CEF008F28AA5028009FFCEF /* AuthModule */ = {
 			isa = PBXGroup;
 			children = (
+				7C10D18D28F97AE300889CFF /* ZameenSignup */,
 				7CEF009028AA5028009FFCEF /* AppDelegate.swift */,
 				7CEF009228AA5028009FFCEF /* SceneDelegate.swift */,
 				7CEF00B028AA6BB2009FFCEF /* Signup */,
 				0F3AF9E428ABA58B00E75DEC /* LamudiSignup */,
+				7C47D1EC28F9773A0046DFEE /* comon.swift */,
 				7CEF009928AA5029009FFCEF /* Assets.xcassets */,
 				7CEF009B28AA5029009FFCEF /* LaunchScreen.storyboard */,
 				7CEF009E28AA5029009FFCEF /* Info.plist */,
@@ -114,7 +126,6 @@
 				7CEF00A728AA6A3D009FFCEF /* SignupModels.swift */,
 				7CEF00A828AA6A3D009FFCEF /* SignupViewController.swift */,
 				7CEF00A928AA6A3D009FFCEF /* SignupInteractor.swift */,
-				7CEF00B128AA6C38009FFCEF /* Signup.storyboard */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -197,6 +208,7 @@
 				7CEF00AF28AA6A3D009FFCEF /* SignupInteractor.swift in Sources */,
 				0F3AF9FC28ABA91100E75DEC /* LamudiSignupInteractor.swift in Sources */,
 				7CEF00AE28AA6A3D009FFCEF /* SignupViewController.swift in Sources */,
+				7C47D1ED28F9773A0046DFEE /* comon.swift in Sources */,
 				7CEF009128AA5028009FFCEF /* AppDelegate.swift in Sources */,
 				7CEF00AA28AA6A3D009FFCEF /* SignupPresenter.swift in Sources */,
 				7CEF00AB28AA6A3D009FFCEF /* SignupWorker.swift in Sources */,

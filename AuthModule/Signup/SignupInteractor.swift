@@ -78,6 +78,8 @@ class SignupInteractor: SignupBusinessLogic, SignupDataStore {
         }
         presenter.removeSignupFromProgress()
     }
+
+    // MARK: - Utility functions
     
     func validate() -> Bool {
         var validationSuccess = true
