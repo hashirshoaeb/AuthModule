@@ -17,7 +17,7 @@ protocol LamudiSignupPresentationLogic: SignupPresentationLogic {
     func removeLastNameValidationError()
 }
 
-class LamudiSignupPresenter: SignupPresenter{
+class LamudiSignupPresenter: SignupPresenter {
     // MARK: - VIP Setup
     
     private let viewController: LamudiSignupDisplayLogic

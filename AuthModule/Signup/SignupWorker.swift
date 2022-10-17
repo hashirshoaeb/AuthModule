@@ -12,8 +12,5 @@
 
 import UIKit
 
-class SignupWorker
-{
-    func doSomeWork() {
-    }
+protocol SignupWorker {
 }

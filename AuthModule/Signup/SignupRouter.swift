@@ -22,7 +22,7 @@ protocol SignupDataPassing
 }
 
 class SignupRouter: NSObject, SignupRoutingLogic, SignupDataPassing {
-    weak var viewController: SignupViewController?
+    weak var viewController: ZameenSignupViewController?
     var dataStore: SignupDataStore?
     
     // MARK: Routing
