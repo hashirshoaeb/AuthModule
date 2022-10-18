@@ -17,6 +17,7 @@
 		7C2CF9DF28FD249A007BD9B2 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2CF9DE28FD249A007BD9B2 /* SignupViewController.swift */; };
 		7C2CF9E128FD2A33007BD9B2 /* ZameenSignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2CF9E028FD2A33007BD9B2 /* ZameenSignupPresenter.swift */; };
 		7C2CF9E328FD2E4D007BD9B2 /* ZameenSignupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2CF9E228FD2E4D007BD9B2 /* ZameenSignupInteractor.swift */; };
+		7C2CF9E528FE8C16007BD9B2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7C2CF9E428FE8C16007BD9B2 /* README.md */; };
 		7C47D1ED28F9773A0046DFEE /* comon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C47D1EC28F9773A0046DFEE /* comon.swift */; };
 		7CEF009128AA5028009FFCEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF009028AA5028009FFCEF /* AppDelegate.swift */; };
 		7CEF009328AA5028009FFCEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF009228AA5028009FFCEF /* SceneDelegate.swift */; };
@@ -42,6 +43,7 @@
 		7C2CF9DE28FD249A007BD9B2 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		7C2CF9E028FD2A33007BD9B2 /* ZameenSignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZameenSignupPresenter.swift; sourceTree = "<group>"; };
 		7C2CF9E228FD2E4D007BD9B2 /* ZameenSignupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZameenSignupInteractor.swift; sourceTree = "<group>"; };
+		7C2CF9E428FE8C16007BD9B2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		7C47D1EC28F9773A0046DFEE /* comon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comon.swift; sourceTree = "<group>"; };
 		7CEF008D28AA5028009FFCEF /* AuthModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEF009028AA5028009FFCEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		7CEF008428AA5028009FFCEF = {
 			isa = PBXGroup;
 			children = (
+				7C2CF9E428FE8C16007BD9B2 /* README.md */,
 				7CEF008F28AA5028009FFCEF /* AuthModule */,
 				7CEF008E28AA5028009FFCEF /* Products */,
 			);
@@ -199,6 +202,7 @@
 			files = (
 				0F3AF9E328ABA57B00E75DEC /* LamudiSignup.storyboard in Resources */,
 				7CEF009D28AA5029009FFCEF /* LaunchScreen.storyboard in Resources */,
+				7C2CF9E528FE8C16007BD9B2 /* README.md in Resources */,
 				7CEF009A28AA5029009FFCEF /* Assets.xcassets in Resources */,
 				7CEF00B228AA6C38009FFCEF /* ZameenSignup.storyboard in Resources */,
 			);
