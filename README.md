@@ -34,11 +34,28 @@ public protocol Storyboarded {
 # UIViewController
  
 ```swift
+protocol SomethingSource {
+    var variable: String {get set}
+}
+
+protocol SomethingDelegate {
+    func onAction()
+}
+
 public class Something: UIViewController {
+    private var delegate: SomethingDelegate?
+    private var viewModel: SomethingSource?
     
     // MARK: - IBOutlets
     
     // MARK: - VIP Setup
+    func setup(viewModel: SomethingSource?) {
+        self.viewModel = viewModel
+    }
+    
+    func setup(delegate: SomethingDelegate?) {
+        self.delegate = delegate
+    }
     
     // MARK: - View Life Cycle
     
@@ -50,6 +67,26 @@ public class Something: UIViewController {
 // MARK: - Extensions
 
 extension Something: Storyboarded {
-
+    static func instantiate() -> Self {
+        let id = String(describing: self)
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        return storyboard.instantiateViewController(withIdentifier: id) as! Self
+    }
+    
+    // MARK: - Utility functions
+    public static func instantiateWithParams(delegate: SomethingDelegate?, viewModel: SomethingSource?) -> Self {
+        let screenController = Something.instantiate()
+        screenController.delegate = delegate
+        screenController.viewModel = viewModel
+        return screenController as! Self
+    }
+    
+    public static func instantiateAsBottomSheet(delegate: SomethingDelegate?, viewModel: SomethingSource?) -> UIViewController {
+        let screenController = Something.instantiateWithParams(delegate: delegate, viewModel: viewModel)
+        screenController.preferredContentSize.height = CGFloat(156.0)
+        let viewController = BottomSheetNavigationController(rootViewController: screenController)
+        viewController.navigationBar.isHidden = true
+        return viewController
+    }
 }
 ```
